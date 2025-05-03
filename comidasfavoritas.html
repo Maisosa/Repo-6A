@@ -4,31 +4,48 @@
   <link rel="stylesheet" href="color3.css">
   <style>
     body {
-      background-color: black
+      background-color: lightblue
       font-family: Arial, sans-serif;
+      font-style: italic; 
+      color: black; 
+      text-align: center; 
+      padding: 50px;
     }
 
     h1 {
       font-style: italic;
-      text-align: center;
       margin-top: 40px;
     }
 
     .bloque {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 20px;
       margin: 30px;
     }
 
     .bloque h2 {
       font-style: italic;
+      font-size: 22px;
     }
 
     .bloque img {
       width: 150px;
       height: auto;
       border-radius: 8px;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 30px;
+      color: #333;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -38,18 +55,20 @@
 
   <div class="bloque">
     <h2>Pastel de papa</h2>
-    <img src="Imagen_1.jpg" width:20 height:20>
+    <img src="Imagen_1.jpg" alt="Pastel de papa">
   </div>
 
   <div class="bloque">
     <h2>Pizza</h2>
-    <img src="Imagen_2.jpg" width:20 height:20>
+    <img src="Imagen_2.jpg" alt="Pizza">
   </div>
 
   <div class="bloque">
     <h2>Helado</h2>
-    <img src="Imagen_3.jpg" width:20 height:20>
+    <img src="Imagen_3.jpg" alt="Helado">
   </div>
-<a href="index.html">Volver al índice</a>
+
+  <a href="index.html">Volver al índice</a>
+
 </body>
 </html>
