@@ -1,10 +1,10 @@
 <html>
-  <head>
+<head>
   <meta charset="UTF-8">
   <title>Agregar Usuario</title>
   <style>
     body {
-      background-color: #0e3d6b; /* azul elegante */
+      background-color: #0e3d6b;
       color: white;
       font-family: Arial, sans-serif;
       font-style: italic;
@@ -100,12 +100,31 @@
       <input type="email" id="email" placeholder="Ingrese email">
     </div>
 
-    <button onclick="window.location.href='index.html'">Aceptar</button>
+    <button onclick="guardarUsuario()">Aceptar</button>
   </div>
 
   <script>
     function mostrarFormulario() {
       document.getElementById('formulario').style.display = 'block';
+    }
+
+    function guardarUsuario() {
+      const nombre = document.getElementById('nombre').value.trim();
+      const apellido = document.getElementById('apellido').value.trim();
+
+      if (nombre && apellido) {
+        // Recuperar usuarios existentes o iniciar lista
+        let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+        // Agregar nuevo usuario (solo nombre y apellido, como pediste)
+        usuarios.push({ nombre, apellido });
+
+        // Guardar en localStorage
+        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+      }
+
+      // Redirigir al index
+      window.location.href = 'index.html';
     }
   </script>
 
