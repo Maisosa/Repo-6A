@@ -1,0 +1,97 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Buscar Usuario</title>
+  <style>
+    body {
+      background-color: #0e3d6b; 
+      color: white;
+      font-family: Arial, sans-serif;
+      font-style: italic;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      min-height: 100vh;
+      margin: 0;
+      padding-top: 50px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: white;
+      color: #0e3d6b;
+      font-weight: bold;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-style: italic;
+      margin: 10px;
+    }
+
+    a {
+      color: white;
+      text-decoration: underline;
+      margin-top: 10px;
+      display: block;
+    }
+
+    #formulario {
+      display: none;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    label {
+      margin-right: 10px;
+    }
+
+    input {
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      width: 200px;
+      font-style: italic;
+    }
+
+    .botones {
+      margin-top: 20px;
+    }
+
+    .botones button {
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Buscar usuario</h1>
+  <button onclick="mostrarFormulario()">Buscar usuario</button>
+  <a href="index.html">Volver al índice</a>
+
+  <div id="formulario">
+    <h2>Buscar usuario</h2>
+    <div>
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" placeholder="Ingrese apellido">
+    </div>
+    <div class="botones">
+      <button onclick="window.location.href='agregar.html'">Agregar</button>
+      <button onclick="window.location.href='listar.html'">Listar</button>
+    </div>
+  </div>
+
+  <script>
+    function mostrarFormulario() {
+      document.getElementById('formulario').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
