@@ -1,0 +1,164 @@
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Listar Usuario</title>
+  <style>
+    body {
+      background-color: #0e3d6b;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-style: italic;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      min-height: 100vh;
+      margin: 0;
+      padding-top: 50px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: white;
+      color: #0e3d6b;
+      font-weight: bold;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-style: italic;
+      margin: 10px;
+    }
+
+    a {
+      color: white;
+      text-decoration: underline;
+      margin-top: 10px;
+      display: block;
+    }
+
+    #listado {
+      display: none;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      text-align: center;
+      width: 80%;
+      max-width: 600px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .icono-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      margin: 0 5px;
+    }
+
+    .icono-btn:hover {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Listar usuario</h1>
+  <button onclick="mostrarListado()">Listar</button>
+  <a href="index.html">Volver al índice</a>
+
+  <div id="listado">
+    <h2>Lista de usuarios</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Iconos</th>
+        </tr>
+      </thead>
+      <tbody id="tablaUsuarios">
+        <!-- Aquí se insertarán filas dinámicamente -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    function mostrarListado() {
+      const listado = document.getElementById('listado');
+      const tabla = document.getElementById('tablaUsuarios');
+      tabla.innerHTML = ''; // Limpiar tabla
+
+      const datos = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+      if (datos.length > 0) {
+        datos.forEach(usuario => {
+          const fila = document.createElement('tr');
+
+          const tdNombre = document.createElement('td');
+          tdNombre.textContent = usuario.nombre;
+
+          const tdApellido = document.createElement('td');
+          tdApellido.textContent = usuario.apellido;
+
+          const tdIconos = document.createElement('td');
+
+          const btnEliminar = document.createElement('button');
+          btnEliminar.innerHTML = '🗑️';
+          btnEliminar.className = 'icono-btn';
+          btnEliminar.title = 'Eliminar';
+          btnEliminar.onclick = () => window.location.href = 'index.html';
+
+          const btnEditar = document.createElement('button');
+          btnEditar.innerHTML = '✏️';
+          btnEditar.className = 'icono-btn';
+          btnEditar.title = 'Editar';
+          btnEditar.onclick = () => window.location.href = 'index.html';
+
+          const btnMostrar = document.createElement('button');
+          btnMostrar.innerHTML = '🔍';
+          btnMostrar.className = 'icono-btn';
+          btnMostrar.title = 'Mostrar';
+          btnMostrar.onclick = () => window.location.href = 'index.html';
+
+          tdIconos.appendChild(btnEliminar);
+          tdIconos.appendChild(btnEditar);
+          tdIconos.appendChild(btnMostrar);
+
+          fila.appendChild(tdNombre);
+          fila.appendChild(tdApellido);
+          fila.appendChild(tdIconos);
+
+          tabla.appendChild(fila);
+        });
+      } else {
+        const fila = document.createElement('tr');
+        const td = document.createElement('td');
+        td.colSpan = 3;
+        td.textContent = 'No hay usuarios agregados.';
+        fila.appendChild(td);
+        tabla.appendChild(fila);
+      }
+
+      listado.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
