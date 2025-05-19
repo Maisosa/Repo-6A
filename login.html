@@ -2,42 +2,48 @@
 <head>
   <meta charset="UTF-8">
   <title>Login</title>
+  
+  <!-- Fuente cursiva Great Vibes -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  
   <style>
     body {
-      background-color: #0e3d6b; 
+      background-color: #072c4f; /* Azul más oscuro */
       color: white;
-      font-family: Arial, sans-serif;
-      font-style: italic;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: start;
-      min-height: 100vh;
+      font-family: 'Great Vibes', cursive;
+      text-align: center;
+      padding: 50px;
       margin: 0;
-      padding-top: 50px;
     }
 
     h1 {
-      margin-bottom: 20px;
+      font-size: 48px;
+      margin-bottom: 30px;
     }
 
     button {
       background-color: white;
-      color: #0e3d6b;
+      color: #072c4f;
       font-weight: bold;
       border: none;
       padding: 10px 20px;
       border-radius: 8px;
       cursor: pointer;
-      font-style: italic;
+      font-size: 18px;
       margin: 10px;
+      font-family: 'Great Vibes', cursive;
     }
 
     a {
+      display: inline-block;
+      margin-top: 40px;
       color: white;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    a:hover {
       text-decoration: underline;
-      margin-top: 10px;
-      display: block;
     }
 
     #formulario {
@@ -45,15 +51,17 @@
       background-color: rgba(255, 255, 255, 0.1);
       padding: 20px 30px;
       border-radius: 10px;
-      margin-top: 20px;
-      text-align: center;
+      margin-top: 30px;
     }
 
     .campo {
-      margin: 10px 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      margin: 15px 0;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 20px;
     }
 
     input {
@@ -61,12 +69,13 @@
       border: none;
       border-radius: 5px;
       width: 200px;
-      font-style: italic;
+      text-align: center;
+      font-family: 'Great Vibes', cursive;
     }
 
     .icono {
       font-size: 40px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
   </style>
 </head>
@@ -75,6 +84,7 @@
   <h1>Login</h1>
 
   <button onclick="mostrarLogin()">Login</button>
+  <br>
   <a href="index.html">Volver al índice</a>
 
   <div id="formulario">
@@ -101,3 +111,4 @@
 
 </body>
 </html>
+
