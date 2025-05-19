@@ -1,0 +1,88 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Página de Login</title>
+  <style>
+    body {
+      background-color: #0e3d6b; /* azul elegante */
+      color: white;
+      font-family: Arial, sans-serif;
+      font-style: italic;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h2, label, a, button {
+      text-align: center;
+    }
+
+    #loginForm {
+      display: none;
+      margin-top: 20px;
+    }
+
+    input {
+      display: block;
+      margin: 10px auto;
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      width: 200px;
+    }
+
+    button {
+      background-color: #ffffff;
+      color: #0e3d6b;
+      font-weight: bold;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-style: italic;
+    }
+
+    a {
+      color: #ffffff;
+      text-decoration: underline;
+      margin-top: 10px;
+      display: block;
+    }
+
+    .icono-persona {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="mostrarLogin()">Login</button>
+  <a href="inicio.html">Volver</a>
+
+  <div id="loginForm">
+    <div class="icono-persona">👤</div>
+    <label for="apellido">Apellido</label>
+    <input type="text" id="apellido" placeholder="Escribe tu apellido">
+
+    <label for="contraseña">Contraseña</label>
+    <input type="password" id="contraseña" placeholder="Escribe tu contraseña">
+
+    <button onclick="irAlInicio()">Login</button>
+  </div>
+
+  <script>
+    function mostrarLogin() {
+      document.getElementById('loginForm').style.display = 'block';
+    }
+
+    function irAlInicio() {
+      // Simulación de ir al inicio (reemplaza con tu ruta real)
+      window.location.href = "inicio.html";
+    }
+  </script>
+
+</body>
+</html>
