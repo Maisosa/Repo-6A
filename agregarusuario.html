@@ -2,55 +2,64 @@
 <head>
   <meta charset="UTF-8">
   <title>Agregar Usuario</title>
+
+  <!-- Fuente cursiva Great Vibes -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
   <style>
     body {
-      background-color: #0e3d6b;
+      background-color: #072c4f; /* Azul elegante oscuro */
       color: white;
-      font-family: Arial, sans-serif;
-      font-style: italic;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: start;
-      min-height: 100vh;
+      font-family: 'Great Vibes', cursive;
+      text-align: center;
+      padding: 50px;
       margin: 0;
-      padding-top: 50px;
     }
 
     h1 {
+      font-size: 48px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
       margin-bottom: 20px;
     }
 
     button {
       background-color: white;
-      color: #0e3d6b;
+      color: #072c4f;
       font-weight: bold;
       border: none;
       padding: 10px 20px;
       border-radius: 8px;
       cursor: pointer;
-      font-style: italic;
+      font-size: 18px;
       margin: 10px;
+      font-family: 'Great Vibes', cursive;
     }
 
     a {
+      display: inline-block;
+      margin-top: 40px;
       color: white;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    a:hover {
       text-decoration: underline;
-      margin-top: 10px;
-      display: block;
     }
 
     #formulario {
       display: none;
       background-color: rgba(255, 255, 255, 0.1);
-      padding: 20px 30px;
+      padding: 30px;
       border-radius: 10px;
-      margin-top: 20px;
-      text-align: center;
+      margin-top: 30px;
     }
 
     .campo {
-      margin: 10px 0;
+      margin: 15px 0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -58,7 +67,8 @@
 
     label {
       margin-right: 10px;
-      width: 80px;
+      width: 100px;
+      font-size: 20px;
       text-align: right;
     }
 
@@ -66,15 +76,18 @@
       padding: 8px;
       border: none;
       border-radius: 5px;
-      width: 200px;
-      font-style: italic;
+      width: 220px;
+      font-family: 'Great Vibes', cursive;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
   <h1>Agregar usuario</h1>
+
   <button onclick="mostrarFormulario()">Agregar</button>
+  <br>
   <a href="index.html">Volver al índice</a>
 
   <div id="formulario">
@@ -116,7 +129,7 @@
         // Recuperar usuarios existentes o iniciar lista
         let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
-        // Agregar nuevo usuario (solo nombre y apellido, como pediste)
+        // Agregar nuevo usuario
         usuarios.push({ nombre, apellido });
 
         // Guardar en localStorage
@@ -130,3 +143,4 @@
 
 </body>
 </html>
+
