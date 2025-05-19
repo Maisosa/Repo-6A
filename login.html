@@ -1,41 +1,28 @@
 <html>
-  <head>
+<head>
   <meta charset="UTF-8">
-  <title>Página de Login</title>
+  <title>Login</title>
   <style>
     body {
-      background-color: #0e3d6b; /* azul elegante */
+      background-color: #0e3d6b; 
       color: white;
       font-family: Arial, sans-serif;
       font-style: italic;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
+      justify-content: start;
+      min-height: 100vh;
       margin: 0;
+      padding-top: 50px;
     }
 
-    h2, label, a, button {
-      text-align: center;
-    }
-
-    #loginForm {
-      display: none;
-      margin-top: 20px;
-    }
-
-    input {
-      display: block;
-      margin: 10px auto;
-      padding: 8px;
-      border: none;
-      border-radius: 5px;
-      width: 200px;
+    h1 {
+      margin-bottom: 20px;
     }
 
     button {
-      background-color: #ffffff;
+      background-color: white;
       color: #0e3d6b;
       font-weight: bold;
       border: none;
@@ -43,45 +30,72 @@
       border-radius: 8px;
       cursor: pointer;
       font-style: italic;
+      margin: 10px;
     }
 
     a {
-      color: #ffffff;
+      color: white;
       text-decoration: underline;
       margin-top: 10px;
       display: block;
     }
 
-    .icono-persona {
-      font-size: 50px;
+    #formulario {
+      display: none;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px 30px;
+      border-radius: 10px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .campo {
+      margin: 10px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input {
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      width: 200px;
+      font-style: italic;
+    }
+
+    .icono {
+      font-size: 40px;
       margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
 
+  <h1>Login</h1>
+
   <button onclick="mostrarLogin()">Login</button>
   <a href="index.html">Volver al índice</a>
 
-  <div id="loginForm">
-    <div class="icono-persona">👤</div>
-    <label for="apellido">Apellido</label>
-    <input type="text" id="apellido" placeholder="Escribe tu apellido">
+  <div id="formulario">
+    <div class="icono">👤</div>
 
-    <label for="contraseña">Contraseña</label>
-    <input type="password" id="contraseña" placeholder="Escribe tu contraseña">
+    <div class="campo">
+      <label for="apellido">Apellido</label>
+      <input type="text" id="apellido" placeholder="Ingrese su apellido">
+    </div>
 
-    <button onclick="irAlInicio()">Login</button>
+    <div class="campo">
+      <label for="clave">Contraseña</label>
+      <input type="password" id="clave" placeholder="Ingrese su contraseña">
+    </div>
+
+    <button onclick="window.location.href='index.html'">Login</button>
   </div>
 
   <script>
     function mostrarLogin() {
-      document.getElementById('loginForm').style.display = 'block';
-    }
-
-    function irAlInicio() {
-      // Simulación de ir al inicio (reemplaza con tu ruta real)
-      window.location.href = "inicio.html";
+      document.getElementById('formulario').style.display = 'block';
     }
   </script>
 
