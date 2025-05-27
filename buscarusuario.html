@@ -81,30 +81,22 @@
     }
   </style>
 </head>
+
 <body>
-
-  <h1>Buscar usuario</h1>
-  <button onclick="mostrarFormulario()">Buscar usuario</button>
-  <br>
-  <a href="index.html">Volver al índice</a>
-
-  <div id="formulario">
-    <h2>Buscar usuario</h2>
-    <div>
-      <label for="apellido">Apellido:</label>
-      <input type="text" id="apellido" placeholder="Ingrese apellido">
-    </div>
-    <div class="botones">
-      <button onclick="window.location.href='agregarusuario.html'">Agregar</button>
-      <button onclick="window.location.href='listarusuario.html'">Listar</button>
-    </div>
-  </div>
-
-  <script>
-    function mostrarFormulario() {
-      document.getElementById('formulario').style.display = 'block';
-    }
-  </script>
+  <form action="index.html" method="post">
+     <a href="index.html">Volver al índice</a>
+  <div class="icono">👤</div>
+ 
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter your username" name="uname" required>
+    
+    <button type="submit" name="action" value="agregar">Agregar</button>
+    <button type="submit" name="action" value="listar">Listar</button>
+    </label>
+  
+</form>
 
 </body>
+
 </html>
