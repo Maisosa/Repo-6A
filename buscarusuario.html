@@ -81,11 +81,10 @@
     }
   </style>
 </head>
-
 <body>
   <h1>Buscar Usuario</h1>
 
-  <form action="index.html" method="post">
+  <form action="index.html" method="post" id="buscarForm">
     <div class="container">
       <label for="uname"><b>Apellido</b></label>
       <input type="text" placeholder="Ingrese su apellido" name="uname" required>
@@ -98,6 +97,13 @@
       <a href="index.html">Volver al índice</a>
     </div>
   </form>
+
+  <script>
+    document.getElementById('buscarForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Evita el envío del formulario
+      window.location.href = 'index.html'; // Redirige a index.html
+    });
+  </script>
 </body>
 </html>
 
