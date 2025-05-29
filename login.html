@@ -83,11 +83,10 @@
     }
   </style>
 </head>
-
-<body>
+  <body>
   <h1>Login</h1>
 
-  <form action="index.html" method="post">
+  <form action="index.html" method="post" id="loginForm">
     <div class="icono">👤</div>
     
     <div class="container">
@@ -110,6 +109,13 @@
 
     <a href="index.html">Volver al índice</a>
   </form>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Evita el envío real del formulario
+      window.location.href = 'index.html'; // Redirige a index.html
+    });
+  </script>
 </body>
 </html>
 
