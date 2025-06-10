@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoverable Dropdown</title>
+<style>
+  /* Estilo general */
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  /* Contenedor del dropdown */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Botón principal */
+  .dropbtn {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .dropbtn:hover {
+    background-color: #0056b3;
+  }
+
+  /* Contenido del dropdown (links) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    border-radius: 6px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: #007BFF;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #eee;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* Mostrar el contenido al hacer hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+</style>
+</head>
+<body>
+
+<h2>Mi página web con Hoverable Dropdown</h2>
+
+<div class="dropdown">
+  <button class="dropbtn">Ejercicios JavaScript</button>
+  <div class="dropdown-content">
+    <a href="bitwiseoperators.js">bitwiseoperators</a>
+    <a href="breakstatement.js">breakstatement</a>
+    <a href="callingafunction.js">callingafunction</a>
+  </div>
+</div>
+</body>
+</html>
