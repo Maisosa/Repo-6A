@@ -1,4 +1,36 @@
 <html>
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+body {
+  background-color: #e0f0ff;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.boton-indice {
+  font-family: 'Dancing Script', cursive;
+  background: #007BFF;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 24px;
+  border-radius: 50px 10px 50px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.boton-indice:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+</style>
+</head>
+
 <body>
 <script type="text/javascript">
 document.write("Entering the loop!<br /> ");
@@ -17,6 +49,9 @@ for (var i = 0; i < 5; i++)
 }
 document.write("Exiting the loop!<br /> ");
 </script>
-   <a href="index.html">Volver al índice</a>
+
+<!-- Botón estilizado -->
+<a href="index.html" class="boton-indice">Volver al índice</a>
 </body>
 </html>
+
