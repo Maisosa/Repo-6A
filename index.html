@@ -29,6 +29,53 @@
     a:hover {
       text-decoration: underline;
     }
+
+    /* Estilo para el botón de ejercicios */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .dropbtn {
+      background-color: #007BFF;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .dropbtn:hover {
+      background-color: #0056b3;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 200px;
+      border-radius: 6px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #007BFF;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      border-bottom: 1px solid #eee;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -45,11 +92,52 @@
   <a href="mejoresamigos.html">Mejores amigos</a>
   <a href="comidasfavoritas.html">Comidas favoritas</a>
   <a href="login.html">Login</a>
-   <a href="buscarusuario.html">Buscar usuario</a>
-   <a href="agregarusuario.html">Agregar usuario</a>
-   <a href="listarusuario.html">Listar usuario</a>
-   <a href="falsoindex.html">Falso index</a>
+  <a href="buscarusuario.html">Buscar usuario</a>
+  <a href="agregarusuario.html">Agregar usuario</a>
+  <a href="listarusuario.html">Listar usuario</a>
 
+  <!-- BOTÓN DE "Ejercicios JavaScript" DEBAJO DEL ÚLTIMO LINK -->
+  <div class="dropdown">
+    <button class="dropbtn">Ejercicios JavaScript</button>
+    <div class="dropdown-content">
+      5- VARIABLES
+      <a href="variablescope.html">Variable Scope</a>
+      6- OPERADORES
+      <a href="arithmeticoperators.html">Arithmetic Operators</a>
+      <a href="comparisonoperators.html">Comparison Operators</a>
+      <a href="logicaloperators.html">Logical Operators</a>
+      <a href="bitwiseoperators.html">Bitwise Operators</a>
+      <a href="assignmentoperators.html">Assignment Operators</a>
+      <a href="conditionaloperator.html">Conditional Operator</a>
+      <a href="typeofoperator.html">Typeof Operator</a>
+      7- IF-ELSE
+      <a href="ifstatement.html">If Statement</a>
+      <a href="ifelsestatement.html">If...Else Statement</a>
+      <a href="ifelseifstatement.html">If...Else If...Statement</a>
+      8- SWITCH-CASE
+      <a href="switchcasestatement1.html">Switch Case Statement example 1</a>
+      <a href="switchcasestatement2.html">Switch Case Statement example 2</a>
+      9- WHILE LOOP
+      <a href="whileloop.html">While Loop</a>
+      <a href="dowhileloop.html">Do...While Loop</a>
+      10- FOR LOOP
+      <a href="forloop.html">For Loop</a>
+      11- FOR-IN LOOP
+      <a href="forinloop.html">For-In Loop</a>
+      12- LOOP CONTROL
+      <a href="breakstatement.html">Break Statement</a>
+      <a href="continuestatement.html">Continue Statement</a>
+      <a href="labelwithabreakstatement.html">Label with a Break Statement</a>
+      <a href="labelwithcontinue.html">Label with a Continue Statement</a>
+      13- FUNCTIONS
+      <a href="functionsayhello.html">Function "Say Hello"</a>
+      <a href="callingafunction.html">Calling a Function</a>
+      <a href="functionparameters.html">Function Parameters</a>
+      <a href="returnstatement.html">Return Statement</a>
+      <a href="nestedfunctions.html">Nested Functions</a>
+      <a href="function()constructor.html">Function () Constructor</a>
+      <a href="functionliterals.html">Function Literals</a>
+    </div>
+  </div>
 </body>
 </html>
-
